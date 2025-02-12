@@ -12,7 +12,8 @@
                 <element inactive_on_update="false" label="AB-" value="ab-"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Address" max_length="40" name="address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element attributes="edge_encryption_enabled=true" label="Date of Birth&#9;" max_length="40" name="date_of_birth" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" mandatory="true" max_length="40" name="gender" type="choice">
