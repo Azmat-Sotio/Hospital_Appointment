@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="3cc8f263c3efd61009dffeac050131ed" label="Hospital_app" max_length="40" name="x_1530445_hosp_hospital_app" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Emergency Contact Name" mandatory="true" max_length="40" name="emergency_contact" type="string"/>
+        <element label="Primary Care Physician&#9;" max_length="32" name="primary_care_physician" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Blood Group" max_length="40" name="blood_group" type="choice">
             <choice>
-                <element inactive_on_update="false" label="AB+" value="ab+"/>
-                <element inactive_on_update="false" label="B-" value="b-"/>
-                <element inactive_on_update="false" label="B+" value="b+"/>
                 <element inactive_on_update="false" label="A+" value="a+"/>
-                <element inactive_on_update="false" label="O-" value="o-"/>
-                <element inactive_on_update="false" label="A-" value="a-"/>
+                <element inactive_on_update="false" label="AB+" value="ab+"/>
+                <element inactive_on_update="false" label="B+" value="b+"/>
                 <element inactive_on_update="false" label="O+" value="o+"/>
                 <element inactive_on_update="false" label="AB-" value="ab-"/>
+                <element inactive_on_update="false" label="A-" value="a-"/>
+                <element inactive_on_update="false" label="O-" value="o-"/>
+                <element inactive_on_update="false" label="B-" value="b-"/>
             </choice>
         </element>
         <element label="Address" max_length="40" name="address" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
-        <element attributes="edge_encryption_enabled=true" label="Emergency Contact Name" mandatory="true" max_length="40" name="emergency_contact" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Date of Birth&#9;" max_length="40" name="date_of_birth" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" mandatory="true" max_length="40" name="gender" type="choice">
             <choice>
