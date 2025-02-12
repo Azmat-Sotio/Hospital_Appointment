@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3cc8f263c3efd61009dffeac050131ed" label="Hospital_app" max_length="40" name="x_1530445_hosp_hospital_app" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Blood Group" max_length="40" name="blood_group" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="AB+" value="ab+"/>
+                <element inactive_on_update="false" label="B-" value="b-"/>
+                <element inactive_on_update="false" label="B+" value="b+"/>
+                <element inactive_on_update="false" label="A+" value="a+"/>
+                <element inactive_on_update="false" label="O-" value="o-"/>
+                <element inactive_on_update="false" label="A-" value="a-"/>
+                <element inactive_on_update="false" label="O+" value="o+"/>
+                <element inactive_on_update="false" label="AB-" value="ab-"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" label="Date of Birth&#9;" max_length="40" name="date_of_birth" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" mandatory="true" max_length="40" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Female" value="f"/>
+                <element inactive_on_update="false" label="Male" value="m"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Doctor Name" mandatory="true" max_length="32" name="doctor_name" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="patient Name" mandatory="true" max_length="40" name="patient_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Contact Number&#9;" max_length="40" name="contact_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Appointment Date &amp; Time&#9;" max_length="40" name="appointment_date_time" type="glide_date_time"/>
+        <index name="index">
+            <element name="doctor_name"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
