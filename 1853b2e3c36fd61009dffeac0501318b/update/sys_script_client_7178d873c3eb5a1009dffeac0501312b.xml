@@ -14,16 +14,19 @@
     if (isLoading || newValue === '') {
         return;
     }
-    var a = g_form.getValue("doctor_name");
-    g_form.setValue('primary_care_physician', a);
-}]]></script>
+
+    var caller = g_form.getReference('doctor_name', populate); // doAlert is our callback function
+    function populate(caller) {
+        g_form.setValue("primary_care_physician",caller.name);
+        }
+    }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-12 17:47:18</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7178d873c3eb5a1009dffeac0501312b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>populating Primary Care Physcician</sys_name>
         <sys_overrides/>
         <sys_package display_value="Hospital-Appointment-Registration." source="x_1530445_hosp">1853b2e3c36fd61009dffeac0501318b</sys_package>
@@ -31,7 +34,7 @@
         <sys_scope display_value="Hospital-Appointment-Registration.">1853b2e3c36fd61009dffeac0501318b</sys_scope>
         <sys_update_name>sys_script_client_7178d873c3eb5a1009dffeac0501312b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-12 17:47:18</sys_updated_on>
+        <sys_updated_on>2025-02-17 07:08:54</sys_updated_on>
         <table>x_1530445_hosp_hospital_app</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
